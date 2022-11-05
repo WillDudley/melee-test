@@ -1,1 +1,5 @@
-melee-env==0.30.0
+pettingzoo==1.22.1
+
+# Ideally install the below as editable - these forks can pretty much be considered part of the core of the project
+git@https://github.com/WillDudley/melee-env.git
+git@https://github.com/WillDudley/libmelee.git
