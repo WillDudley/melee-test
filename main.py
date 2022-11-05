@@ -15,8 +15,8 @@ episodes = 10; reward = 0
 env.start_emulator()
 
 for episode in range(episodes):
-    gamestate, done = env.reset(enums.Stage.FOUNTAIN_OF_DREAMS)
-    while not done:
+    gamestate, terminated = env.reset(enums.Stage.FOUNTAIN_OF_DREAMS)
+    while not terminated:
         actions = []
         for player in players:
             if player.agent_type == "CPU":  # CPU actions are handled internally
@@ -24,4 +24,5 @@ for episode in range(episodes):
             else:
                 action = player.act(gamestate)
             actions.append(action)
-        gamestate, done = env.step(actions=actions)
+        observation, reward, terminated, truncated, infos = env.step(actions=actions)
+        gamestate = infos["gamestate"]
