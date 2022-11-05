@@ -15,7 +15,9 @@ episodes = 10; reward = 0
 env.start_emulator()
 
 for episode in range(episodes):
-    gamestate, terminated = env.reset(enums.Stage.FOUNTAIN_OF_DREAMS)
+    observation, infos = env.reset(enums.Stage.FOUNTAIN_OF_DREAMS)
+    gamestate = infos["gamestate"]
+    terminated = False
     while not terminated:
         actions = []
         for player in players:
