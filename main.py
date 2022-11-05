@@ -17,6 +17,11 @@ env.start_emulator()
 for episode in range(episodes):
     gamestate, done = env.reset(enums.Stage.FOUNTAIN_OF_DREAMS)
     while not done:
-        for i in range(len(players)):
-            players[i].act(gamestate)
-        gamestate, done = env.step()
+        actions = []
+        for player in players:
+            if player.agent_type == "CPU":  # CPU actions are handled internally
+                action = None
+            else:
+                action = player.act(gamestate)
+            actions.append(action)
+        gamestate, done = env.step(actions=actions)
