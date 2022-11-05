@@ -1,6 +1,6 @@
 import os.path
 
-from melee_env.env import MeleeEnv
+from melee_env.pettingzoo_env import MeleeEnv
 from melee_env.agents.basic import *
 from melee_env.agents.gymnasium_basic import CPUFox, RandomFox
 import argparse
