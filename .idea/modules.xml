@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../libmelee/.idea/libmelee.iml" filepath="$PROJECT_DIR$/../libmelee/.idea/libmelee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../melee-env/.idea/melee-env.iml" filepath="$PROJECT_DIR$/../melee-env/.idea/melee-env.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/melee-test.iml" filepath="$PROJECT_DIR$/.idea/melee-test.iml" />
     </modules>
   </component>
