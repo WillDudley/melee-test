@@ -9,7 +9,7 @@ players = [RandomFox(), CPUFox()]
 #players = [Random(enums.Character.FOX, press_start=False), Random(enums.Character.FOX, press_start=False)]
 
 
-env = MeleeEnv(os.path.expanduser('~/.melee/SSBM.ciso'), players, fast_forward=True)
+env = MeleeEnv(players, os.path.expanduser('~/.melee/SSBM.ciso'), fast_forward=True)
 
 episodes = 10; reward = 0
 env.start_emulator()
