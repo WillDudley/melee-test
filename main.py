@@ -1,20 +1,16 @@
 import os.path
 
 from melee_env.pettingzoo_env import MeleeEnv
-from melee_env.agents.basic import *
 from melee_env.agents.gymnasium_basic import CPUFox, RandomFox
-import argparse
 
 players = [RandomFox(), CPUFox()]
-#players = [Random(enums.Character.FOX, press_start=False), Random(enums.Character.FOX, press_start=False)]
-
 
 env = MeleeEnv(players, os.path.expanduser('~/.melee/SSBM.ciso'), fast_forward=True)
 
-episodes = 10; reward = 0
+max_episodes = 10
 env.start_emulator()
 
-for episode in range(episodes):
+for episode in range(max_episodes):
     observation, infos = env.reset(enums.Stage.FOUNTAIN_OF_DREAMS)
     gamestate = infos["gamestate"]
     terminated = False
