@@ -5,7 +5,7 @@ from melee_env.agents.basic import *
 from melee_env.agents.gymnasium_basic import CPUFox, RandomFox
 import argparse
 
-players = [Shine(), CPUFox()]
+players = [RandomFox(), CPUFox()]
 #players = [Random(enums.Character.FOX, press_start=False), Random(enums.Character.FOX, press_start=False)]
 
 
